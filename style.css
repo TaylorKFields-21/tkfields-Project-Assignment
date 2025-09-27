@@ -1,0 +1,163 @@
+/**************** CSS Reset *****************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************** ROOT VARIABLES ******************/
+:root{
+ --maroon: #470803;
+ --golden-green:#8F680D;
+ --olive:#898121;
+ --green:#4C4B16;
+ --dark-green:#18230F;
+ --caramel: #CE793A;
+ --copper:#B64B12;
+ --Desert-tan:#E5D1A4;
+ --cream:#F7F1E5;
+}
+
+/****************** Global Styles ****************/
+ html{
+    /* BACKGROUND IMAGE */   
+background-color: #4c4b16;
+opacity: 0.8;
+background-image:  radial-gradient(#E5D1A4 0.5px, transparent 0.5px), radial-gradient(#E5D1A4 0.5px, var(--green) 0.5px);
+background-size: 20px 20px;
+background-position: 0 0,10px 10px;
+ }
+
+
+/************* HEADER ********************/
+
+header {
+    color: var(--dark-green);
+    background-color: #4c4b16;   
+    background-image:  radial-gradient(#E5D1A4 0.5px, transparent 0.5px), radial-gradient(#E5D1A4 0.5px, var(--green) 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;   
+}
+header h1{
+    font-size: 70px;
+    text-align: center;
+    padding-top: 10px;
+    color: var(--cream);
+}
+ 
+/************* NAV ***************/
+nav{
+    height: 3.5em;
+    min-width:400px;
+}
+nav ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+nav li{
+    margin: 16px 30px;
+    font-size: 25px;
+
+}
+
+nav a{
+    text-decoration: none; 
+    color: var(--dark-green)
+}
+/************** HERO *******************/
+.hero{
+    border: 5px solid var(--dark-green);
+    height: 460px;
+}
+
+ /********************** BODY ************************/
+body{
+	max-width: 800px;
+    margin: 0 auto;
+    background-color: transparent;
+    background-color: var(--Desert-tan);
+     
+    
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;                     
+    padding: 30px;
+}
+ main section{
+    margin-top: 20px;
+    background-color: var(--cream);
+    border: 3px solid var(--green);
+ }
+ main h2{
+   padding: 10px;
+   font-size: 30px;
+   font-weight: bold;
+   color: var(--green);
+ }
+ main p{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+ }
+
+ main section img{
+    padding: 10px;
+ }
+ /********************** FOOTER ************************/
+footer{
+    background-color: #4c4b16;
+    background-image:  radial-gradient(#E5D1A4 0.5px, transparent 0.5px), radial-gradient(#E5D1A4 0.5px, var(--green) 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--cream);
+    padding: 20px;
+}
