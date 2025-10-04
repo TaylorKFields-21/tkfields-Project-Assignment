@@ -119,7 +119,22 @@ nav a{
     height: 460px;
     width: 100%;
     object-fit: cover;   
-  display: block; 
+    display: block; 
+}
+.hero .credit {
+  position: absolute;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--dark-green);
+  background: var(--cream);
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+.hero .credit a{
+    color: var(--green);
+}
+.hero .credit a:hover{
+    color: var(--caramel);
 }
 
  /********************** BODY ************************/
@@ -140,12 +155,12 @@ main{
  section.intro {
     margin-top: 20px;
     background-color: var(--cream);
-    border: 3px solid var(--green);
+    border: 2px solid var(--green);
  }
  section.history{
     margin-top: 20px;
     background-color: var(--cream);
-    border: 3px solid var(--green);
+    border: 2px solid var(--green);
  }
  
  main h2{
@@ -160,9 +175,6 @@ main{
     font-weight: lighter;
  }
 
- main section img{
-    padding: 10px;
- }
 
  /*************** leaves ******************/
  
@@ -174,8 +186,9 @@ main{
   padding: 20px;
 }
 main.leaves .plants {
+  margin-top: 20px;
   background-color: var(--cream); 
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   border: 2px solid var(--dark-green);
 }
@@ -233,13 +246,14 @@ tr:nth-of-type(odd) {
 /***************** Branches *************************/
 main.branches{
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 20px;              
   padding: 20px;
 }
 main.branches .community{
   background-color: var(--cream); 
-  padding: 10px;
+  margin-top: 20px;
+  padding: 20px;
   border-radius: 5px;
   border: 2px solid var(--dark-green);  
 }
@@ -264,17 +278,15 @@ main.branches .community p{
 .signup-form {
   display: flex;
   flex-direction: column;
-  align-items: center;   
+  align-items: center;
   gap: 12px;             
-  margin: 20px auto;
-  max-width: 400px;     
+  margin: 20px;
+  max-width: 300px;     
   background-color: var(--cream);
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   border: 2px solid var(--dark-green);
 }
-
-
 
 .signup-form label {
   display: block;
@@ -285,24 +297,80 @@ main.branches .community p{
 
 .signup-form input {
   width: 100%;           
-  max-width: 250px;      
+  max-width: 220px;      
   padding: 6px;
   border: 1px solid var(--dark-green);
   border-radius: 5px;
  
 }
-
-
 .signup-form button {
   display: block;
-  width: 100%;
+  width: 100px;
   margin-top: 20px;
   padding: 10px;
   background-color: var(--dark-green);
-  color: white;
+  color: var(--cream);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+/**************** Author *********************/
+ .form-author {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  align-items: start;
+}
+.author-box {
+  background: #fffbea;
+  padding: 20px;
+  border: 2px solid var(--dark-green);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.author-box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+
+/********************* Community Forum *****************************/
+#community-forum {
+  background-color: var(--cream);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  border: 2px solid var(--dark-green);
+}
+
+#community-forum h2 {
+  margin-bottom: 15px;
+}
+
+.forum-post {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.forum-post h3 {
+  margin: 0;
+  font-size: 1em;
+  color: #2a5d34;
+}
+
+.forum-post p {
+  margin: 5px 0;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #666;
 }
 
  /********************** FOOTER ************************/
@@ -316,7 +384,18 @@ footer{
     color: var(--cream);
     padding: 20px;
 }
+footer p{
+    line-height: 1.5em;
+}
+footer a{
+    text-decoration: none;
+    color: var(--Desert-tan);
+}
+footer a:hover{
+    color: var(--caramel);
+}
 
+/****************** small view ***********************/
 
 @media (max-width: 600px) {
   main {
