@@ -100,19 +100,24 @@ nav ul{
     justify-content: center;
 }
 nav li{
-    margin: 16px 30px;
+    margin: 16px 50px;
     font-size: 25px;
+    padding-left: 30px;
 
 }
 
 nav a{
     text-decoration: none; 
-    color: var(--dark-green)
+    color: var(--dark-green);
 }
 /************** HERO *******************/
 .hero{
     border: 5px solid var(--dark-green);
     height: 460px;
+}
+.hero img{
+    height: 460px;
+    width: 100%;
 }
 
  /********************** BODY ************************/
@@ -124,17 +129,23 @@ body{
      
     
 }
-main {
+main{
     display: grid;
     grid-template-columns: 1fr 1fr; 
     gap: 20px;                     
     padding: 30px;
 }
- main section{
+ section.intro {
     margin-top: 20px;
     background-color: var(--cream);
     border: 3px solid var(--green);
  }
+ section.history{
+    margin-top: 20px;
+    background-color: var(--cream);
+    border: 3px solid var(--green);
+ }
+ 
  main h2{
    padding: 10px;
    font-size: 30px;
@@ -150,6 +161,148 @@ main {
  main section img{
     padding: 10px;
  }
+
+ /*************** leaves ******************/
+ 
+
+ main.leaves {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;              
+  padding: 20px;
+}
+main.leaves .plants {
+  background-color: var(--cream); 
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--dark-green);
+}
+main.leaves h2 {
+    text-align: center;
+}
+main.leaves .feature h2{
+    padding: 10px;
+    padding-bottom: 25px;
+    color: var(--dark-green);
+
+}
+main.leaves .video{
+    background-color: var(--cream);
+    border-radius: 5px;
+    border: 2px solid var(--dark-green);
+}
+
+main.leaves .video{
+    display: flex;          
+    align-items: center;    
+    gap: 20px;              
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    
+}
+main.leaves .video p {
+    margin: 0;              
+    font-size: 20px;
+    padding: 20px;
+}
+/***************** Table ***********************/
+table{
+  border: 2px solid var(--dark-green);
+  border-collapse: collapse;
+  background-color: var(--cream);
+}
+table th, td{
+ padding: 0.5em;
+ border: 2px solid var(--dark-green);
+}
+th{
+    font-weight: bold;
+    background-color: var(--olive);
+    color: var(--cream);
+}
+td{
+    text-align: center;
+     color: var(--dark-green);
+}
+tr:nth-of-type(odd) {
+  background-color: var(--Desert-tan);
+}
+/***************** Branches *************************/
+main.branches{
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;              
+  padding: 20px;
+}
+main.branches .community{
+  background-color: var(--cream); 
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--dark-green);  
+}
+main.branches .community h2{
+    text-align: center;
+}
+main.branches .community p{
+    margin: 0;              
+    font-size: 20px;
+    padding: 20px;
+}
+
+/******************* Form *************************/
+
+
+.form-section h2 {
+  text-align: center;
+  color: var(--dark-green);
+  margin-bottom: 15px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  gap: 12px;             
+  margin: 20px auto;
+  max-width: 400px;     
+  background-color: var(--cream);
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--dark-green);
+}
+
+
+
+.signup-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
+.signup-form input {
+  width: 100%;           
+  max-width: 250px;      
+  padding: 6px;
+  border: 1px solid var(--dark-green);
+  border-radius: 5px;
+ 
+}
+
+
+.signup-form button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
  /********************** FOOTER ************************/
 footer{
     background-color: #4c4b16;
@@ -160,4 +313,31 @@ footer{
     text-align: center;
     color: var(--cream);
     padding: 20px;
+}
+
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr; 
+  }
+  nav li{
+    margin: 16px 15px;   
+}
+main.leaves .video{
+    display: flex;
+  flex-direction: column;   
+  align-items: center;     
+  padding: 10px;
+}
+
+main.leaves .video video{
+    max-width: 100%;          
+    width: 400px; 
+    margin-bottom: 20px;
+}
+main.leaves .video p {
+    margin: 0;              
+    font-size: 20px;
+    padding: 10px;
+}
 }
