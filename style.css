@@ -87,7 +87,6 @@ header h1{
     padding-top: 10px;
     color: var(--cream);
 }
- 
 /************* NAV ***************/
 nav{
     height: 3.5em;
@@ -105,11 +104,18 @@ nav li{
     padding-left: 30px;
 
 }
-
 nav a{
     text-decoration: none; 
     color: var(--dark-green);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
+nav a:hover{
+    color: var(--green);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+}
+
+
+
 /************** HERO *******************/
 .hero{
     border: 5px solid var(--dark-green);
@@ -132,6 +138,7 @@ nav a{
 }
 .hero .credit a{
     color: var(--green);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 .hero .credit a:hover{
     color: var(--caramel);
@@ -187,13 +194,19 @@ main{
 }
 main.leaves .plants {
   margin-top: 20px;
-  background-color: var(--cream); 
+  background-color: var(--green); 
   padding: 20px;
   border-radius: 5px;
   border: 2px solid var(--dark-green);
 }
 main.leaves h2 {
     text-align: center;
+    color: var(--cream);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+}
+main.leaves .plants p{
+    color: var(--cream);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
 }
 main.leaves .feature h2{
     padding: 10px;
@@ -221,6 +234,16 @@ main.leaves .video p {
     font-size: 20px;
     padding: 20px;
 }
+main.leaves .video video {
+    width: 380px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main.leaves .video video:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+
+}
 /***************** Table ***********************/
 table{
   border: 2px solid var(--dark-green);
@@ -233,15 +256,24 @@ table th, td{
 }
 th{
     font-weight: bold;
-    background-color: var(--olive);
+    background-color: var(--green);
     color: var(--cream);
 }
 td{
     text-align: center;
      color: var(--dark-green);
+     vertical-align: middle;
 }
 tr:nth-of-type(odd) {
   background-color: var(--Desert-tan);
+}
+td img{
+    max-width: 100%;    
+    max-height: 80px;   
+    object-fit: cover;  
+    display: block;     
+    margin: 0 auto;     
+    border-radius: 5px;
 }
 /***************** Branches *************************/
 main.branches{
@@ -251,7 +283,7 @@ main.branches{
   padding: 20px;
 }
 main.branches .community{
-  background-color: var(--cream); 
+  background-color: var(--green); 
   margin-top: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -259,11 +291,15 @@ main.branches .community{
 }
 main.branches .community h2{
     text-align: center;
+    color: var(--cream);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
 }
 main.branches .community p{
     margin: 0;              
     font-size: 20px;
     padding: 20px;
+    color: var(--cream);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
 }
 
 /******************* Form *************************/
@@ -273,6 +309,7 @@ main.branches .community p{
   text-align: center;
   color: var(--dark-green);
   margin-bottom: 15px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
 }
 
 .signup-form {
@@ -301,8 +338,12 @@ main.branches .community p{
   padding: 6px;
   border: 1px solid var(--dark-green);
   border-radius: 5px;
- 
 }
+.signup-form input:focus{
+    background-color: var(--Desert-tan);
+}
+
+
 .signup-form button {
   display: block;
   width: 100px;
@@ -314,6 +355,12 @@ main.branches .community p{
   border-radius: 5px;
   cursor: pointer;
 }
+
+.signup-form button:hover{
+    background-color: var(--green);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.399);
+    
+}
 /**************** Author *********************/
  .form-author {
   display: grid;
@@ -324,19 +371,29 @@ main.branches .community p{
   align-items: start;
 }
 .author-box {
-  background: #fffbea;
+  background: var(--green);
   padding: 20px;
   border: 2px solid var(--dark-green);
-  border-radius: 8px;
+  border-radius: 5px;
   text-align: center;
+  margin-top: 68px;
 }
 
 .author-box img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 2px solid var(--cream);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.671);;
+}
+.author-box h2{
+    color:var(--cream);
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+.author-box p{
+    color: var(--cream);
 }
 
 
@@ -344,33 +401,49 @@ main.branches .community p{
 #community-forum {
   background-color: var(--cream);
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: -20px;
   border-radius: 8px;
   border: 2px solid var(--dark-green);
 }
 
 #community-forum h2 {
   margin-bottom: 15px;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 }
 
 .forum-post {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--dark-green);
   padding: 10px 0;
+}
+.forum-post img{
+    padding: 10px;
+    width:150px;
+    height:180px;
 }
 
 .forum-post h3 {
   margin: 0;
   font-size: 1em;
-  color: #2a5d34;
+  color: var(--green);
+  font-size: 20px;
 }
 
 .forum-post p {
   margin: 5px 0;
+  color:var(--dark-green)
+}
+
+iframe{
+     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.671);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+iframe:hover{
+    transform: scale(1.05);
 }
 
 .timestamp {
   font-size: 0.8em;
-  color: #666;
+  color: var(--copper);
 }
 
  /********************** FOOTER ************************/
@@ -390,6 +463,7 @@ footer p{
 footer a{
     text-decoration: none;
     color: var(--Desert-tan);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 footer a:hover{
     color: var(--caramel);
@@ -420,5 +494,25 @@ main.leaves .video p {
     margin: 0;              
     font-size: 20px;
     padding: 10px;
+}
+
+.form-author {
+grid-template-columns: 1fr;
+}
+.form-section h2{
+    margin-top: -70px;
+}
+.signup-form {
+    margin: 10px auto;
+    max-width: 600px;
+}
+.signup-form input{
+    max-width: 500px;
+}
+.signup-form button{
+    width: 500px;
+}
+.author-box{
+    margin-top: 10px;
 }
 }
