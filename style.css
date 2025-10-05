@@ -471,12 +471,13 @@ footer a:hover{
 
 /****************** small view ***********************/
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   main {
     grid-template-columns: 1fr; 
   }
   nav li{
-    margin: 16px 15px;   
+    margin: 10px 15px; 
+    padding: 10px;  
 }
 main.leaves .video{
     display: flex;
@@ -500,17 +501,17 @@ main.leaves .video p {
 grid-template-columns: 1fr;
 }
 .form-section h2{
-    margin-top: -70px;
+    margin-top: -10px;
 }
 .signup-form {
-    margin: 10px auto;
-    max-width: 600px;
+    margin: 20px auto;
+    max-width: 400px;
 }
 .signup-form input{
-    max-width: 500px;
+    max-width: 300px;
 }
 .signup-form button{
-    width: 500px;
+    width: 300px;
 }
 .author-box{
     margin-top: 10px;
