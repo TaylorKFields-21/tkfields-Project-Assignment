@@ -59,6 +59,9 @@ table {
  --copper:#B64B12;
  --Desert-tan:#E5D1A4;
  --cream:#F7F1E5;
+ --heading-font: "Emilys Candy", serif;
+ --text:"Oranienbaum", serif;
+
 }
 
 /****************** Global Styles ****************/
@@ -79,13 +82,14 @@ header {
     background-color: #4c4b16;   
     background-image:  radial-gradient(#E5D1A4 0.5px, transparent 0.5px), radial-gradient(#E5D1A4 0.5px, var(--green) 0.5px);
     background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;   
+    background-position: 0 0, 10px 10px;  
 }
 header h1{
     font-size: 70px;
     text-align: center;
     padding-top: 10px;
     color: var(--cream);
+    font-family: var(--heading-font)
 }
 /************* NAV ***************/
 nav{
@@ -99,9 +103,10 @@ nav ul{
     justify-content: center;
 }
 nav li{
-    margin: 16px 50px;
-    font-size: 25px;
+    margin: 15px 50px;
+    font-size: 30px;
     padding-left: 30px;
+    font-family: var(--text);
 
 }
 nav a{
@@ -159,24 +164,37 @@ main{
     gap: 20px;                     
     padding: 30px;
 }
+ section.intro h2{
+  font-family: var(--heading-font);
+}
  section.intro {
     margin-top: 20px;
     background-color: var(--cream);
     border: 2px solid var(--green);
     line-height: 1.5em;
  }
+ section.intro p{
+  font-family: var(--text);
+ }
  section.intro a{
     color: var(--green);
-  transition: transform 0.3s ease, color 0.3s ease;
+   transition: transform 0.3s ease, color 0.3s ease;
  }
  section.intro a:hover{
   color: var(--caramel);
+ }
+ section.history h2{
+  font-family: var(--heading-font);
+
  }
  section.history{
     margin-top: 20px;
     background-color: var(--cream);
     border: 2px solid var(--green);
     line-height: 1.5em;
+ }
+ section.history p{
+   font-family: var(--text);
  }
  section.history i{
   font-style: italic;
@@ -226,15 +244,20 @@ main.leaves h2 {
     text-align: center;
     color: var(--cream);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+    font-family: var(--heading-font);
 }
 main.leaves .plants p{
     color: var(--cream);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+    font-family: var(--text);
+    line-height: 1.4em;
 }
 main.leaves .feature h2{
     padding: 10px;
     padding-bottom: 25px;
     color: var(--dark-green);
+    font-family: var(--heading-font);
+    
 
 }
 main.leaves .video{
@@ -256,6 +279,8 @@ main.leaves .video p {
     margin: 0;              
     font-size: 20px;
     padding: 20px;
+    font-family: var(--text);
+    line-height: 1.4em;
 }
 main.leaves .video video {
     width: 380px;
@@ -276,11 +301,18 @@ table{
 table th, td{
  padding: 0.5em;
  border: 2px solid var(--dark-green);
+ font-family: var(--text);
 }
 th{
     font-weight: bold;
     background-color: var(--green);
     color: var(--cream);
+    font-size: 20px;
+}
+table strong{
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--green);
 }
 td{
     text-align: center;
@@ -316,6 +348,7 @@ main.branches .community h2{
     text-align: center;
     color: var(--cream);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+    font-family: var(--heading-font);
 }
 main.branches .community p{
     margin: 0;              
@@ -323,6 +356,8 @@ main.branches .community p{
     padding: 20px;
     color: var(--cream);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+    font-family: var(--text);
+    line-height: 1.4em;
 }
 
 /******************* Form *************************/
@@ -333,6 +368,7 @@ main.branches .community p{
   color: var(--dark-green);
   margin-bottom: 15px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.417);
+  font-family: var(--heading-font);
 }
 
 .signup-form {
@@ -353,6 +389,7 @@ main.branches .community p{
   margin-top: 10px;
   font-weight: bold;
   color: var(--dark-green);
+  font-family: var(--text);
 }
 
 .signup-form input {
@@ -377,6 +414,7 @@ main.branches .community p{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: var(--text);
 }
 
 .signup-form button:hover{
@@ -414,9 +452,12 @@ main.branches .community p{
 .author-box h2{
     color:var(--cream);
     text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    font-family: var(--heading-font);
 }
 .author-box p{
     color: var(--cream);
+    font-family: var(--text);
+    line-height: 1.4em;
 }
 
 
@@ -432,6 +473,7 @@ main.branches .community p{
 #community-forum h2 {
   margin-bottom: 15px;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  font-family: var(--heading-font);
 }
 
 .forum-post {
@@ -453,7 +495,9 @@ main.branches .community p{
 
 .forum-post p {
   margin: 5px 0;
-  color:var(--dark-green)
+  color:var(--dark-green);
+  font-family: var(--text);
+  line-height: 1.2em;
 }
 
 iframe{
@@ -482,6 +526,7 @@ footer{
 }
 footer p{
     line-height: 1.5em;
+    font-family: var(--text);
 }
 footer a{
     text-decoration: none;
