@@ -163,11 +163,34 @@ main{
     margin-top: 20px;
     background-color: var(--cream);
     border: 2px solid var(--green);
+    line-height: 1.5em;
+ }
+ section.intro a{
+    color: var(--green);
+  transition: transform 0.3s ease, color 0.3s ease;
+ }
+ section.intro a:hover{
+  color: var(--caramel);
  }
  section.history{
     margin-top: 20px;
     background-color: var(--cream);
     border: 2px solid var(--green);
+    line-height: 1.5em;
+ }
+ section.history i{
+  font-style: italic;
+  color: var(--dark-green)
+ }
+ section.history cite{
+  font-size: small;
+ }
+ section.history a{
+   color: var(--green);
+  transition: transform 0.3s ease, color 0.3s ease;
+ }
+ section.history a:hover{
+   color: var(--caramel);
  }
  
  main h2{
@@ -475,7 +498,13 @@ footer a:hover{
   main {
     grid-template-columns: 1fr; 
   }
-  nav li{
+.hero img{
+  height: 200px;
+  }
+.hero{
+  height:200px;
+}
+nav li{
     margin: 10px 15px; 
     padding: 10px;  
 }
