@@ -326,7 +326,7 @@ tr:nth-of-type(odd) {
 }
 td img{
     max-width: 100%;    
-    max-height: 80px;   
+    max-height: 400px;   
     object-fit: cover;  
     display: block;     
     margin: 0 auto;     
@@ -541,7 +541,7 @@ footer a:hover{
 
 /****************** small view ***********************/
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   main {
     grid-template-columns: 1fr; 
   }
@@ -552,8 +552,10 @@ footer a:hover{
   height:200px;
 }
 nav li{
-    margin: 10px 15px; 
-    padding: 10px;  
+    margin: -9px 20px; 
+    padding: 23px; 
+   
+  
 }
 main.leaves .video{
     display: flex;
@@ -569,8 +571,16 @@ main.leaves .video video{
 }
 main.leaves .video p {
     margin: 0;              
-    font-size: 20px;
     padding: 10px;
+}
+table td{
+  font-size: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+table img{
+  width: 500px;
+  height: 100px;
 }
 
 .form-author {
