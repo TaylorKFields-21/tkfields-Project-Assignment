@@ -313,9 +313,10 @@ table strong{
   font-weight: bold;
   font-size: 18px;
   color: var(--green);
+  
 }
 td{
-    text-align: center;
+    text-align: left;
      color: var(--dark-green);
      vertical-align: middle;
 }
